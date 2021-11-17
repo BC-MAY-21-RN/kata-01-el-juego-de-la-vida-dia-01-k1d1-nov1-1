@@ -1,0 +1,23 @@
+{
+  "name": "kata-01-el-juego-de-la-vida-dia-01-k1d1-nov1-1",
+  "version": "1.0.0",
+  "description": "Juego de la vida",
+  "main": "iteracion01.js",
+  "dependencies": {
+    "eslint": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BC-MAY-21-RN/kata-01-el-juego-de-la-vida-dia-01-k1d1-nov1-1.git"
+  },
+  "author": "Team 1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BC-MAY-21-RN/kata-01-el-juego-de-la-vida-dia-01-k1d1-nov1-1/issues"
+  },
+  "homepage": "https://github.com/BC-MAY-21-RN/kata-01-el-juego-de-la-vida-dia-01-k1d1-nov1-1#readme"
+}
