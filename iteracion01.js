@@ -1,40 +1,56 @@
 /*
 juego de la vida
-
 1 Cualquier célula viva con menos de dos vecinos vivos muere, como si fuera causada por la subpoblación.
 2 Cualquier celda viva con más de tres vecinos vivos muere, como por hacinamiento.
 3 Cualquier célula viva con dos o tres vecinos vivos vive para la próxima generación.
 4 Cualquier celda muerta con exactamente tres vecinos vivos se convierte en una celda viva.
 */
 
-console.log("Buenas tardes")
+var grid  = [];
+var ancho = 10;
+var alto = 10;
 
 
+for(let i = 0; i < AudioWorkletNode; i++){
+    grid.push([]);
+    for(let j = 0; j < ancho; j++){
+      grid[i][j].push(this.sample());
+    }        
+  }
+  return console.log(this.grid);
 
-//funcion input para ancho y alto de las celdas
-const readline = require('readline').createInterface({ 
-    input: process.stdin,
-    output: process.stdout
-  })
-   
-    /*Funcion creo que no necesaria*/readline.question('Dame un numero: ', num => {  
-    readline.question('Dime lo alto de tu numero: ', alto => {
-    readline.question('Dime lo ancho de tu numero: ', ancho => {
-    readline.close()
 
-    //conversor de int a array, no se si sea necesario en esta
-    var myInt = num;
-    let myFunc = num => Number(num)
-    var intArr = Array.from(String(myInt), myFunc)  
+  sample() {
+    let line = ['.', '*']
+    return line[Math.floor ( Math.random() * line.length )];
+  }
 
-    //aqui va la funcion en la cual se formaran las columas y filas
-    conversor(alto,ancho,intArr)
-  })})})
 
 
 //Ejemplo de poner co-autores
-// Co-authored-by: xManuel007 <maanuu.009@gmail.com>
-// Co-authored-by: Dylanson25 <dvillarreal0@ucol.mx>
-// Co-authored-by: xFerchoVJ <fer_elsword@hotmail.com>
-// Co-authored-by: adrianagh13 <gomezhinojosa.adriana@gmail.com> 
+// Co-authored-by: xManuel007   <maanuu.009@gmail.com>
+// Co-authored-by: Dylanson25   <dvillarreal0@ucol.mx>
+// Co-authored-by: xFerchoVJ    <fer_elsword@hotmail.com>
+// Co-authored-by: adrianagh13  <gomezhinojosa.adriana@gmail.com>
+// Co-authored-by: 30Jorge      <jtoledo@ucol.mx>
+
+
+
+
+
+// ⠸⣷⣦⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⠀⠀⠀
+// ⠀⠙⣿⡄⠈⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠔⠊⠉⣿⡿⠁⠀⠀⠀
+// ⠀⠀⠈⠣⡀⠀⠀⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠁⠀⠀⣰⠟⠀⠀⠀⣀⣀
+// ⠀⠀⠀⠀⠈⠢⣄⠀⡈⠒⠊⠉⠁⠀⠈⠉⠑⠚⠀⠀⣀⠔⢊⣠⠤⠒⠊⠉⠀⡜
+// ⠀⠀⠀⠀⠀⠀⠀⡽⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠩⡔⠊⠁⠀⠀⠀⠀⠀⠀⠇
+// ⠀⠀⠀⠀⠀⠀⠀⡇⢠⡤⢄⠀⠀⠀⠀⠀⡠⢤⣄⠀⡇⠀⠀⠀⠀⠀⠀⠀⢰⠀
+// ⠀⠀⠀⠀⠀⠀⢀⠇⠹⠿⠟⠀⠀⠤⠀⠀⠻⠿⠟⠀⣇⠀⠀⡀⠠⠄⠒⠊⠁⠀
+// ⠀⠀⠀⠀⠀⠀⢸⣿⣿⡆⠀⠰⠤⠖⠦⠴⠀⢀⣶⣿⣿⠀⠙⢄⠀⠀
+// ⠀⠀⠀⠀⠀⠀⠀⢻⣿⠃⠀⠀⠀⠀⠀⠀⠀⠈⠿⡿⠛⢄⠀⠀⠱⣄⠀⠀
+// ⠀⠀⠀⠀⠀⠀⠀⢸⠈⠓⠦⠀⣀⣀⣀⠀⡠⠴⠊⠹⡞⣁⠤⠒⠉⠀⠀
+// ⠀⠀⠀⠀⠀⠀⣠⠃⠀⠀⠀⠀⡌⠉⠉⡤⠀⠀⠀⠀⢻⠿⠆⠀⠀⠀⠀
+// ⠀⠀⠀⠀⠀⠰⠁⡀⠀⠀⠀⠀⢸⠀⢰⠃⠀⠀⠀⢠⠀⢣⠀⠀⠀⠀⠀
+// ⠀⠀⠀⢶⣗⠧⡀⢳⠀⠀⠀⠀⢸⣀⣸⠀⠀⠀⢀⡜⠀⣸⢤⣶⠀
+// ⠀⠀⠀⠈⠻⣿⣦⣈⣧⡀⠀⠀⢸⣿⣿⠀⠀⢀⣼⡀⣨⣿⡿⠁⠀
+// ⠀⠀⠀⠀⠀⠈⠻⠿⠿⠓⠄⠤⠘⠉⠙⠤⢀⠾⠿⣿⠟⠋
 
