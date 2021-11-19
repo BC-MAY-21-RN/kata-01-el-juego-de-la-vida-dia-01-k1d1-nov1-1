@@ -16,6 +16,6 @@ export default class Display{
         cadena += this.matriz[i][x]
       }
     }
-    return cadena
+    console.log(cadena) 
   }
 }

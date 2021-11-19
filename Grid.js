@@ -27,6 +27,3 @@ export default class Grid extends Display {
     return this.grid;
   }
 }
-var prueba = new Grid(4,8);
-
-prueba.create_grid()

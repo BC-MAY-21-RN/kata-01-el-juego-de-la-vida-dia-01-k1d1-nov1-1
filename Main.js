@@ -1,22 +1,34 @@
-import Display from "./Display"
-import Grid from "./Grid"
-class Main{
+class Main {
+  constructor(nombre) {
+    this.nombre = nombre;
+    this.altura = null;
+    this.ancho = null;
+  }
+  
+  obtenerValores() {
+    const readline = require("readline").createInterface({
+      //input de numero
+      input: process.stdin,
+      output: process.stdout,
+    });
+    
+    readline.question("Dame la altura que necesitas: ", (altura) => {
+      readline.question("Dame la ancho que necesitas: ", (ancho) => {
+        readline.close();
 
-    print_display(){
-      
-    } 
+        var height = parseInt(altura);
+        var width = parseInt(ancho);
+        
+        console.log(`Hola ${height}, ${width}`);
+      });
+    });
+  }
 }
 
-const readline = require('readline').createInterface({ //input de numero
-    input: process.stdin,
-    output: process.stdout
-  })
-    
-    readline.question('Dime lo alto de tu numero: ', height => {
-    readline.question('Dime lo ancho de tu numero: ', width => {
-    readline.close()
+var main = new Main('grid_1');
+
+main.obtenerValores();
 
 
-    //conversor(height,width)
-  })})
-
+/*height = prompt('Alto');
+        height=numb(height);*/
